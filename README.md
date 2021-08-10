@@ -1,7 +1,7 @@
 ﻿## LR-GNN: a graph neural network based on link representation for predicting molecular associations
 
 ### Overview
-This repository contains codes necessary to run the CGNN algorithm. 
+This repository contains codes necessary to run the LR-GNN algorithm. 
 
 ### Running Environment
 * Windows environment, Python 3
