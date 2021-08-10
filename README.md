@@ -8,7 +8,7 @@ This repository contains codes necessary to run the LR-GNN algorithm.
 * PyTorch >= 1.3.1
 
 ### Datasets
-All datasets are available at [data](http://bioinfo.nankai.edu.cn/kangcz.html).
+All datasets are available at [data](https://bioinfo.nankai.edu.cn/kangcz_dataset/).
 
 ### Model Framework
 ![Model framework of LR-GNN](Workflow.png)
