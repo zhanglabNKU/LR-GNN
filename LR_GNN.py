@@ -46,7 +46,6 @@ class propagation_rule(nn.Module):
         return lr
 
 class LR_GNN(nn.Module):
-
     def __init__(self, in_feat, hidd_list, num_layer,
                  num_rela_type):
         super(LR_GNN, self).__init__()
@@ -80,12 +79,14 @@ class LR_GNN(nn.Module):
                 adj_wei,
                 sample,
                 output_thred):
-        if self.num_rela_type > 1:
+        if self.num_rela_type == 2:
             node_embedding = [node_embed1, node_embed2]
-        else:
+        elif self.num_rela_type == 1:
             assert node_embed2 == '', \
                 "If the number of relation types is one, the node_embed2 must be '' "
             node_embedding = node_embed1
+        else:
+            raise ValueError("Error: the num_rela_type is 2 for LDA, MDA data and 1 for PPI, DDI data.")
         lr_dict = {}
         lr_fused_dict = {}
         for i in range(self.num_layer):
